@@ -9,3 +9,7 @@ export const changeText = (e) => dispatch => {
     }
     dispatch(action)
 }
+
+export const logValues = (values) => dispatch => {
+    console.log(values, "hey")
+}

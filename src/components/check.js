@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import LoginForm from '../forms/login'
+
 import {changeText} from '../actions/testActions';
 
 class Check extends Component {
@@ -10,6 +12,7 @@ class Check extends Component {
                 <div className="header_text">DATA.POLICE.UK</div>
                 <input onChange={this.props.changeText} value={this.props.text} type="text"/>
                 <p>{this.props.check}</p>
+                <LoginForm />
             </div>
         )
     }
