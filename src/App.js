@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
+import './App.scss';
 
 class App extends Component {
     render(){
         return(
-            <div>React App</div>
+            <div className="test">React App
+                <div className="tester">test</div>
+            </div>
         )
     }
 }
