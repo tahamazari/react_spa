@@ -1,8 +1,28 @@
+.access_form_main {
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto;
+    display: block;
+    padding: 8% 0% 0% 0%;
+}
+
+.access_btn_main {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    height: auto;
+}
+
+.access_btn:nth-child(2) {
+    float: right;
+}
+
 .access_btn {
     background: #e50914;
     font-family: 'Oxygen';
     color: #fff;
-    width: 100%;
+    width: 49%;
     border: 1px solid #e50914;
 }
 

@@ -2,13 +2,14 @@ import React, {Component} from "react";
 import './form_styles.scss';
 import { Field, reduxForm } from "redux-form";
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 
 import {Login} from '../actions/loginActions';
 
 class LoginForm extends Component {
   render(){
     return (
-      <div className="login_form_main">
+      <div className="access_form_main">
         <form onSubmit={this.props.handleSubmit(this.props.Login)}>
           <div className="form-group">
             <label htmlFor="email">Email</label>
@@ -19,7 +20,10 @@ class LoginForm extends Component {
             <Field name="password" component="input" type="password" className="form-control"/>
           </div>
           <div className="access_error_msg">{this.props.login_error}</div>
-          <button type="submit" className="btn access_btn">Login</button>
+          <div className="access_btn_main">
+            <button type="submit" className="btn access_btn">Login</button>
+            <Link to='/register' className="btn access_btn">Register here!</Link>
+          </div>
         </form>
       </div>
     )

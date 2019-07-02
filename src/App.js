@@ -3,6 +3,7 @@ import './App.scss';
 
 import Check from './components/check';
 import Home from './components/home/home';
+import Register from './components/register/register';
 
 import {Provider} from 'react-redux';
 import store from './store/store';
@@ -21,6 +22,7 @@ class App extends Component {
                     </div>
                     <Route exact path='/' component={Home}></Route>   
                     <Route exact path='/check' component={Check}></Route>
+                    <Route exact path='/register' component={Register}></Route>
                 </Provider>
             </Router>
         )
