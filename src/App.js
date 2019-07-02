@@ -2,22 +2,23 @@ import React, {Component} from 'react';
 import './App.scss';
 import Check from './components/check';
 
-import Header from './components/header/header'
-import Footer from './components/footer/footer'
+import Home from './components/home/home';
 
 import {Provider} from 'react-redux';
-import store from './store/store';
+import store, {history} from './store/store';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 class App extends Component {
     render(){
         return(
-            <Provider store={store}>
-                <div className="App">
-                    <Header />
-                    <Footer />
-                    {/*</div>{<Check />*/}
-                </div>            
-            </Provider>
+            <Router>
+                <Provider store={store}>
+                    <div className="App">
+                    </div>
+                    <Route exact path='/' component={Home}></Route>   
+                    <Route exact path='/check' component={Check}></Route>          
+                </Provider>
+            </Router>
         )
     }
 }
