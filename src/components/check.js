@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import LoginForm from '../forms/login'
+import LoginForm from '../forms/login_form'
 
 import {changeText} from '../actions/testActions';
 
