@@ -4,14 +4,12 @@ import './App.scss';
 import Check from './components/check';
 import Home from './components/home/home';
 import Register from './components/register/register';
+import Dashboard from './components/dashboard/dashboard';
 
 import {Provider} from 'react-redux';
 import store from './store/store';
 import {Router, Route, Link} from 'react-router-dom';
 import history from './history';
-
-// import createHistory from 'history/createBrowserHistory';
-// const history = createHistory(); 
 
 class App extends Component {
     render(){
@@ -23,6 +21,7 @@ class App extends Component {
                     <Route exact path='/' component={Home}></Route>   
                     <Route exact path='/check' component={Check}></Route>
                     <Route exact path='/register' component={Register}></Route>
+                    <Route exact path='/dashboard' component={Dashboard}></Route>
                 </Provider>
             </Router>
         )

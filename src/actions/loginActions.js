@@ -15,8 +15,8 @@ export const Login = (values) => dispatch => {
     })
     .then(function(data){ 
         if(data.login){
-            history.push('/check')
             dispatch(getData(data)) 
+            history.push('/dashboard')
         }
         else {
             dispatch(loginError(data))

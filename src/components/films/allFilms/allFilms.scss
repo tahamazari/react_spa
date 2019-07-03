@@ -1,0 +1,33 @@
+.all_films_main {
+    width: 75%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+
+    .film_card_main {
+        width: 50%;
+        overflow: hidden;
+        height: auto;
+        display: block;
+        float: left;
+
+        .card {
+            width: 80%;
+            margin: 0 auto;
+            color: #e50914;
+            font-family: "Oxygen";
+
+            .rate_btn {
+                background: #e50914;
+                border: 1px solid #e50914;
+                color: #fff;
+            }
+
+            .rate_btn:hover {
+                background: #fff;
+                color: #e50914;
+            }
+        }
+    }
+}

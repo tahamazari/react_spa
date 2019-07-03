@@ -1,0 +1,18 @@
+.logout_btn_main {
+    width: 20%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    float: right;
+    padding: 4% 0% 0% 0%;
+    text-align: center;
+
+    .logout_btn {
+        color: #e50914;
+        font-family: "Oxygen";
+        background: #fff;
+        border: 1px solid #e50914;
+        margin: 0 auto;
+    }
+}
+

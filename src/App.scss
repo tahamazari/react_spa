@@ -4,12 +4,8 @@
 body {
     margin: 0px;
     color: rgb(223, 211, 196);
-}
-
-.test {
-    color: blue;
-
-    .tester {
-        color: green;
-    }
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    width: 100%;
 }
