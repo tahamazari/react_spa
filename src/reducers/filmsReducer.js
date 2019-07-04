@@ -1,5 +1,6 @@
 const initialState = {
-    allFilms: []
+    allFilms: [],
+    averageRatings: []
 }
 
 export default function(state = initialState, action){
@@ -10,6 +11,11 @@ export default function(state = initialState, action){
                 allFilms: action.payload,
             }
             break
+        case "AVERAGE_RATINGS":
+            return {
+                ...state,
+                averageRatings: state.averageRatings.concat(action.payload)
+            }
         default:
             return state
     }

@@ -1,0 +1,35 @@
+.options_main {
+    background: #e50914;
+    overflow: hidden;
+    display: block;
+    height: auto;
+    width: 100%;
+    font-family: "Oxygen";
+    color: #fff;
+    padding: 1%;
+
+    .btns_container {
+        width: 75%;
+        margin: 0 auto;
+        height: auto;
+        overflow: hidden;
+        display: block;
+
+        .options_btn {
+            background: #fff;
+            color: #e50914;
+            border: 1px solid #e50914;
+        }
+
+        .options_btn:hover {
+            background: #e50914;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    }
+}
+
+#options_main.container-fluid {
+    margin: 0;
+    padding: 2% 0%;
+}

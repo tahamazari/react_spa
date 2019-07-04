@@ -7,6 +7,7 @@ import '../films/allFilms/allFilms';
 
 import {connect} from 'react-redux';
 import AllFilms from '../films/allFilms/allFilms';
+import Options from '../Options/options';
 
 class Dashboard extends Component {
     render(){
@@ -16,8 +17,8 @@ class Dashboard extends Component {
                 <div className="welcome_user">
                     Welcome {this.props.name}!
                 </div>
+                <Options />
                 <AllFilms />
-                <Footer />
             </div>
         )
     }
