@@ -5,3 +5,17 @@
 .display_none {
     display: none !important;
 }
+
+.modal-body {
+    .film_details_main {
+        width: 100%;
+        overflow: hidden;
+        height: auto;
+        display: block;
+
+        .film_heading {
+            font-size: 1.75em;
+            text-align: center;
+        }
+    }
+}

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './allFilms.scss';
 
 import {connect} from 'react-redux';
-import {getFilms, getRatings, rateAFilm, currentFilm} from '../../../actions/allFilmsActions';
+import {getFilms, getRatings, rateAFilm} from '../../../actions/allFilmsActions';
 import FilmDetailModal from '../../modals/filmDetailModal';
 import blankImage from '../../../static/blank_image.png';
 
@@ -54,4 +54,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {getFilms, getRatings, rateAFilm, currentFilm})(AllFilms);
+export default connect(mapStateToProps, {getFilms, getRatings, rateAFilm})(AllFilms);
