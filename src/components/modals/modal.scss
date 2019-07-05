@@ -17,5 +17,50 @@
             font-size: 1.75em;
             text-align: center;
         }
+
+        .film_detail_btns_main {
+            width: 100%;
+            overflow: hidden;
+            height: auto;
+            display: block;
+        }
+
+        .ratings_div {
+            width: 100%;
+            overflow: hidden;
+            height: auto;
+            display: block;
+            
+            .ratings_div_number{
+                color: #e50914;
+                width: 100%;
+                overflow: hidden;
+                height: auto;
+                display: block;
+                text-align: center;
+                padding: 4% 0%;
+                font-size: 2em;
+                font-weight: bold;
+            }
+
+            .ratings_slider {
+                width: 100%;
+                overflow: hidden;
+                height: auto;
+                background: #e50914;
+                height: 25px;
+            }
+
+            .access_btn {
+                width: 49%;
+            }
+
+            .ratings_message {
+                padding: 2% 0%;
+            }
+        }
+        .access_btn:nth-child(5){
+            float: right;
+        }
     }
 }

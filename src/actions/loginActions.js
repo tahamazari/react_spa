@@ -32,7 +32,8 @@ export const getData = (data) => dispatch => {
         type: "GET_DATA",
         name: data.name,
         email: data.email,
-        token: data.token
+        token: data.token,
+        id: data.id
     }
     dispatch(action)
 }

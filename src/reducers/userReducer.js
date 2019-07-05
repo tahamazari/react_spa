@@ -2,6 +2,7 @@ const initialState = {
     name: "",
     email: "",
     token: "",
+    userID: 0,
     login_error: ""
 }
 
@@ -12,7 +13,8 @@ export default function(state = initialState, action){
                 ...state,
                 name: action.name,
                 email: action.email,
-                token: action.token
+                token: action.token,
+                userID: action.id
             }
             break
         case "LOGIN_ERROR":
