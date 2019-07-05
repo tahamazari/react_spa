@@ -11,7 +11,12 @@ class FilmDetailModal extends Component {
         ratingDiv: false,
         editDiv: false,
         rating: 5,
-        newRatingResponse: ""
+        newRatingResponse: "",
+        editFilm: {
+            title: this.props.title,
+            year: this.props.year,
+            description: ""
+        }
     }
     
     componentDidMount(){
@@ -22,13 +27,13 @@ class FilmDetailModal extends Component {
 
     ratingDiv(){
         this.setState({
-            ratingDiv: !this.state.ratingDiv
+            ratingDiv: !this.state.ratingDiv,
         })
     }
 
     editDiv(){
         this.setState({
-            editDiv: !this.state.editDiv
+            editDiv: !this.state.editDiv,
         })
     }
 
@@ -126,6 +131,51 @@ class FilmDetailModal extends Component {
             return data
         })
     }
+    
+    editFilm(e){
+        e.preventDefault()
+        const {title, year, description} = this.state.editFilm
+        fetch(`http://localhost:3000/api/films/update/${this.props.id}`, { 
+            method: 'put', 
+            headers: new Headers({
+              'Authorization': 'Bearer '+ this.props.token, 
+              "Content-Type": "application/json"
+            }), 
+            body: JSON.stringify({
+                title: title,
+                year: year,
+                description: description
+            })
+        })
+        .then(response => response.json())
+        .then(function(data){
+            console.log(data, "ggc")
+            outer_this.getAverage(film_id, token)
+            outer_this.setState({
+                newRatingResponse: data.message
+            })
+            return data
+        })
+
+    }
+
+    editFilmTitle(e){
+        this.setState({
+            editFilm: {...this.state.editFilm, title: e.target.value}
+        })
+    }
+
+    editFilmYear(e){
+        this.setState({
+            editFilm: {...this.state.editFilm, year: e.target.value}
+        })
+    }
+
+    editFilmDescription(e){
+        this.setState({
+            editFilm: {...this.state.editFilm, description: e.target.value}
+        })
+    }
 
     render(){
         return(
@@ -136,6 +186,10 @@ class FilmDetailModal extends Component {
                     <div className="film_details_main">
                         <div className="film_heading">
                             {this.state.currentFilm.title}
+                        </div>
+                        <div className="film_content">
+                            <b>Year:</b>
+                            <p>{this.state.currentFilm.year}</p>
                         </div>
                         <div className="film_content">
                             <b>Description:</b>
@@ -165,6 +219,32 @@ class FilmDetailModal extends Component {
                                 className="btn access_btn">
                                     Update Rating
                                 </button>
+                            </div> : ""
+                        }
+                        {
+                            this.state.editDiv ? 
+                            <div className="edit_film_form_main">
+                                <form onSubmit={this.editFilm.bind(this)}>
+                                    <div className="form-group">
+                                        <label for="title">Title</label>
+                                        <input onChange={this.editFilmTitle.bind(this)} value={this.state.editFilm.title} type="text" className="form-control" 
+                                            placeholder="Change title">
+                                        </input>
+                                    </div>
+                                    <div className="form-group">
+                                        <label for="year">Year</label>
+                                        <input onChange={this.editFilmYear.bind(this)} value={this.state.editFilm.year} type="date" className="form-control" 
+                                            placeholder="Change title">
+                                        </input>
+                                    </div>
+                                    <div className="form-group">
+                                        <label for="description">Description</label>
+                                        <input onChange={this.editFilmDescription.bind(this)} type="text" className="form-control" 
+                                            placeholder="Change description">
+                                        </input>
+                                    </div>
+                                    <button id="edit_film_btn" className="btn access_btn">Edit Film</button>
+                                </form>
                             </div> : ""
                         }
                     </div>

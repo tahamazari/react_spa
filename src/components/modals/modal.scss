@@ -62,5 +62,24 @@
         .access_btn:nth-child(5){
             float: right;
         }
+
+        .edit_film_form_main {
+            width: 100%;
+            overflow: hidden;
+            height: auto;
+            display: block;
+            padding: 2% 0%;
+        }
+
+        #edit_film_btn {
+            width: 100%;
+            background: #fff;
+            color: #e50914;
+        }
+
+        #edit_film_btn:hover {
+            background: #e50914;
+            color: #fff;
+        }
     }
 }

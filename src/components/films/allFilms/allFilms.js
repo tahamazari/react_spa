@@ -28,7 +28,7 @@ class AllFilms extends Component {
                                     data-toggle="modal" data-target={`#filmDetailModal${film.id}`}>
                                     View Details
                                 </button>
-                                <FilmDetailModal id={film.id} token={this.props.token} title={film.title}/>
+                                <FilmDetailModal year={film.year} id={film.id} token={this.props.token} title={film.title}/>
                             </div>
                         </div>
                     </div>
