@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import './form_styles.scss';
+
 import { Field, reduxForm } from "redux-form";
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';

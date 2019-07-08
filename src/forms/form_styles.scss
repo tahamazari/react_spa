@@ -39,3 +39,33 @@ label {
 .access_error_msg {
     color: #e50914;
 }
+
+.filter_form_main {
+    width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto;
+    display: block;
+
+    .form-group {
+        float: left;
+        width: 33%;
+    }
+
+    label {
+        font-weight: bold;
+        text-align: center;
+        width: 25%;
+        float: left;
+        padding: 1% 0% 0% 0%;
+    }
+
+    .filter_input {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .access_btn {
+        width: 100%;
+    }
+}

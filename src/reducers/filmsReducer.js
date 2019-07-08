@@ -27,6 +27,11 @@ export default function(state = initialState, action){
                 ...state,
                 currentFilm: action.payload
             }
+        case "FILTER_SEARCH":
+            return {
+                ...state,
+                allFilms: action.payload
+            }
         default:
             return state
     }

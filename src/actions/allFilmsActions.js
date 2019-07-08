@@ -1,4 +1,5 @@
 import $ from "jquery"
+import { filter } from "minimatch";
 
 export const getFilms = (token) => dispatch => {
     fetch('http://localhost:3000/api/films', { 
@@ -65,6 +66,20 @@ export const currentFilm = (id, token) => dispatch => {
     })
 }
 
+export const filterSearch = (token, data) => dispatch => {
+    fetch(`http://localhost:3000/api/films/filter/${data.minYear}/${data.maxYear}/${data.rating}`, { 
+        method: 'get', 
+        headers: new Headers({
+          'Authorization': 'Bearer '+ token, 
+        }), 
+    })
+    .then(response => response.json())
+    .then(function(data){
+        dispatch(filterSearch_(data["results"]))
+        return data
+    })
+}
+
 const addFilm_ = (data) => dispatch => {
     const action = {
         type: "ADD_FILM",
@@ -92,6 +107,14 @@ const averageRatings = (data) => dispatch => {
 const currentFilm_ = data => dispatch => {
     const action = {
         type: "CURRENT_FILM",
+        payload: data
+    }
+    dispatch(action)
+}
+
+const filterSearch_ = data => dispatch => {
+    const action = {
+        type: "FILTER_SEARCH",
         payload: data
     }
     dispatch(action)
