@@ -2,8 +2,7 @@
   "name": "react_spa",
   "version": "1.0.0",
   "engines": {
-    "node": "10.16.0",
-    "npm": "3.5.2"
+    "node": "10.16.0"
   },
   "description": "",
   "main": "index.js",
