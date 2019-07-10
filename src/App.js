@@ -12,6 +12,16 @@ import {Router, Route, Link} from 'react-router-dom';
 import history from './history';
 
 class App extends Component {
+    componentDidMount(){
+        console.log("Hi!")
+        fetch('https://immense-ridge-54213.herokuapp.com/')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(JSON.stringify(data));
+        });
+    }
     render(){
         return(
             <Router history={history}>
