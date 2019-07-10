@@ -2,7 +2,7 @@ import history from '../history';
 
 export const Login = (values) => dispatch => {
     const {email, password} = values
-    fetch("https://react-spa-tintash.herokuapp.com/api/accounts/login", {
+    fetch("https://immense-ridge-54213.herokuapp.com/api/accounts/login", {
         method: "POST",
         headers: {
         'Accept': 'application/json',
