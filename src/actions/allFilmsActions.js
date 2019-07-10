@@ -2,7 +2,7 @@ import $ from "jquery"
 import { filter } from "minimatch";
 
 export const getFilms = (token) => dispatch => {
-    fetch('https://immense-ridge-54213.herokuapp.com/api/films', { 
+    fetch('http://localhost:5000/api/films', { 
         method: 'get', 
         headers: new Headers({
           'Authorization': 'Bearer '+ token, 
@@ -16,7 +16,7 @@ export const getFilms = (token) => dispatch => {
 }
 
 export const getRatings = (token) => dispatch => {
-    fetch(`https://immense-ridge-54213.herokuapp.com/api/ratings/average_ratings`, { 
+    fetch(`http://localhost:5000/api/ratings/average_ratings`, { 
         method: 'get', 
         headers: new Headers({
           'Authorization': 'Bearer '+ token, 
@@ -32,7 +32,7 @@ export const getRatings = (token) => dispatch => {
 export const addFilm = (token, data) => dispatch => {
     console.log(data)
     const {title, year, description} = data
-    fetch("https://immense-ridge-54213.herokuapp.com/api/films/create_film", { 
+    fetch("http://localhost:5000/api/films/create_film", { 
         method: 'post', 
         headers: new Headers({
           'Authorization': 'Bearer '+ token, 
@@ -52,7 +52,7 @@ export const rateAFilm = (data, token) => {
 }
 
 export const currentFilm = (id, token) => dispatch => {
-    fetch(`https://immense-ridge-54213.herokuapp.com/api/films/${id}`, { 
+    fetch(`http://localhost:5000/api/films/${id}`, { 
         method: 'get', 
         headers: new Headers({
           'Authorization': 'Bearer '+ token, 
@@ -67,7 +67,7 @@ export const currentFilm = (id, token) => dispatch => {
 }
 
 export const filterSearch = (token, data) => dispatch => {
-    fetch(`https://immense-ridge-54213.herokuapp.com/api/films/filter/${data.minYear}/${data.maxYear}/${data.rating}`, { 
+    fetch(`http://localhost:5000/api/films/filter/${data.minYear}/${data.maxYear}/${data.rating}`, { 
         method: 'get', 
         headers: new Headers({
           'Authorization': 'Bearer '+ token, 
