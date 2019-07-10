@@ -6,7 +6,7 @@ export const Register = (values) => dispatch => {
         dispatch(passwordMismatch("Passwords do not match!"))
     }
     else {
-        fetch("http://localhost:5000/api/accounts/sign_up", {
+        fetch("https://immense-ridge-54213.herokuapp.com/api/accounts/sign_up", {
             method: "POST",
             headers: {
             'Accept': 'application/json',
