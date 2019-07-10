@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/tahamazari/react_spa/issues"
   },
-  "homepage": "https://tahamazari.github.io/react-spa/",
+  "homepage": "https://tahamazari/tahamazari.github.io/react-spa/",
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
