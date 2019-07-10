@@ -39,7 +39,7 @@ class FilmDetailModal extends Component {
 
     getCurrentFilm  = (id, token) => {
         const outer_this = this
-        fetch(`http://localhost:3000/api/films/${id}`, { 
+        fetch(`https://react-spa-tintash.herokuapp.com/api/films/${id}`, { 
             method: 'get', 
             headers: new Headers({
               'Authorization': 'Bearer '+ token, 
@@ -56,7 +56,7 @@ class FilmDetailModal extends Component {
 
     getAverage = (id, token) => {
         const outer_this = this
-        fetch(`http://localhost:3000/api/ratings/average_rating/${id}`, { 
+        fetch(`https://react-spa-tintash.herokuapp.com/api/ratings/average_rating/${id}`, { 
             method: 'get', 
             headers: new Headers({
               'Authorization': 'Bearer '+ token, 
@@ -86,7 +86,7 @@ class FilmDetailModal extends Component {
 
     editRateFilm = (id, token, rating, film_id) => {
         const outer_this = this
-        fetch(`http://localhost:3000/api/ratings/update_ratings/${id}`, { 
+        fetch(`https://react-spa-tintash.herokuapp.com/api/ratings/update_ratings/${id}`, { 
             method: 'put', 
             headers: new Headers({
               'Authorization': 'Bearer '+ token, 
@@ -110,7 +110,7 @@ class FilmDetailModal extends Component {
 
     RateFilm = (id, token, rating, film_id) => {
         const outer_this = this
-        fetch(`http://localhost:3000/api/ratings/give_rating`, { 
+        fetch(`https://react-spa-tintash.herokuapp.com/api/ratings/give_rating`, { 
             method: 'post', 
             headers: new Headers({
               'Authorization': 'Bearer '+ token, 
@@ -135,7 +135,7 @@ class FilmDetailModal extends Component {
     editFilm(e){
         e.preventDefault()
         const {title, year, description} = this.state.editFilm
-        fetch(`http://localhost:3000/api/films/update/${this.props.id}`, { 
+        fetch(`https://react-spa-tintash.herokuapp.com/api/films/update/${this.props.id}`, { 
             method: 'put', 
             headers: new Headers({
               'Authorization': 'Bearer '+ this.props.token, 
