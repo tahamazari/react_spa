@@ -32,6 +32,7 @@ class App extends Component {
                     <Route exact path='/check' component={Check}></Route>
                     <Route exact path='/register' component={Register}></Route>
                     <Route exact path='/dashboard' component={Dashboard}></Route>
+                    <Route path={process.env.PUBLIC_URL + '/'}></Route>
                 </Provider>
             </Router>
         )
