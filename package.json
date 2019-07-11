@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack --mode production",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -20,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/tahamazari/react_spa/issues"
   },
-  "homepage": "https://tahamazari/tahamazari.github.io/react-spa/",
+  "homepage": "https://tahamazari/tahamazari.github.io/react-spa",
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
